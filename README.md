@@ -8,9 +8,9 @@
 (specifically NBA and NHL).
 The user will be able to manually enter in details of every bet. This includes the date, event, amount
 staked, odds, and outcome (did you win or lose the bet). After entering this information for each bet, the application
-will keep track of all the data and output statistics including overall money won/loss, win percentage, and total number of
-wins and losses. This application allows the user to view every single bet they've ever placed and their personalized 
-statistics.
+will keep track of all the data and output statistics including overall money won/loss, win percentage, and total 
+number of wins and losses. This application allows the user to view every single bet they've ever placed and their 
+personalized statistics.
 
   <br>
 - **Who will use it?** <br>
@@ -23,3 +23,13 @@ people. Especially since it's a fast-growing industry with an increasing amount 
 promoting it, I think it's becoming a problem in many people's lives. My hope is that if people
 start tracking their bets on an application like this, some may realize how much money they're really losing and 
 decide to seek help in order to quit.
+
+
+### User Story
+
+- As a user, I want to be able to add a bet 
+(including date, the actual bet, amount staked, odds, and whether I won or lost that bet) to a list of my bets.
+- As a user, I want to be able to view the total amount of money I won/lost.
+- As a user, I want to be able to view my total number of wins and losses.
+- As a user, I want to be able to view my largest win and largest loss.
+- As a user, I want to be able to view the list of all my bets.
