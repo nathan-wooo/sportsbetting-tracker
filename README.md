@@ -1,10 +1,25 @@
-# My Personal Project
 
-## A subtitle
+# Sports Bet Tracking Application
 
-A *bulleted* list:
-- item 1
-- item 2
-- item 3
+<br>
 
-An example of text with **bold** and *italic* fonts.  
+- **What will the application do?**
+<br> My proposal for my personal project is an application for the user to track down their sports bets 
+(specifically NBA and NHL).
+The user will be able to manually enter in details of every bet. This includes the date, event, amount
+staked, odds, and outcome (did you win or lose the bet). After entering this information for each bet, the application
+will keep track of all the data and output statistics including overall money won/loss, win percentage, and total number of
+wins and losses. This application allows the user to view every single bet they've ever placed and their personalized 
+statistics.
+
+  <br>
+- **Who will use it?** <br>
+The targeted audience for this application are people who would like to responsibly bet or become a responsible better. 
+
+  <br>
+- **Why is this project of interest to you?** <br>
+This is a topic of interest to me since I personally sport bet but also believe sports betting can be very harmful to
+people. Especially since it's a fast-growing industry with an increasing amount of advertisements and influencers 
+promoting it, I think it's becoming a problem in many people's lives. My hope is that if people
+start tracking their bets on an application like this, some may realize how much money they're really losing and 
+decide to seek help in order to quit.
