@@ -3,7 +3,9 @@ package model;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BettingHistoryTest {
 
@@ -14,6 +16,7 @@ public class BettingHistoryTest {
     Bets b5;
 
     BettingHistory l1;
+    BettingHistory l2;
 
     @BeforeEach
     void runBefore() {
@@ -24,6 +27,13 @@ public class BettingHistoryTest {
         b5 = new Bets("Ben Simmons Over 0.5 Three Pointers", 10, 100, false);
 
         l1 = new BettingHistory();
+    }
+
+    @Test
+    void BettingHistory() {
+        l2 = new BettingHistory();
+        assertEquals(0, l2.totalProfit());
+
     }
 
     @Test

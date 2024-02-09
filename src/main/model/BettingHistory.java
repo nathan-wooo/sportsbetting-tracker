@@ -11,13 +11,16 @@ public class BettingHistory {
 
     // Constructs a list of bets, represents the entire betting history
     public BettingHistory() {
+
         this.bettingHistory = new ArrayList<Bets>();
     }
 
     // EFFECTS: adds a bet to the entire betting history list
     public void add(Bets bets) {
+
         this.bettingHistory.add(bets);
     }
+
 
     // REQUIRES: At least one bet object in list of betting history
     // EFFECTS: Returns a string of data about all bets in betting history list
@@ -99,4 +102,5 @@ public class BettingHistory {
     public ArrayList<Bets> getBettingHistory() {
         return bettingHistory;
     }
+
 }

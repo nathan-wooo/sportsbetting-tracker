@@ -26,6 +26,7 @@ public class BetsTest {
         assertEquals(100, b1.getProfit());
         assertEquals(100, b1.getAmountPlaced());
         assertTrue(b1.getWin());
+        assertEquals("LeBron James Over 25.5 Points", b1.getBetDesc());
 
     }
 }
