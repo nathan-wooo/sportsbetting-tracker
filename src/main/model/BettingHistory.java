@@ -9,6 +9,7 @@ public class BettingHistory {
 
     private ArrayList<Bets> bettingHistory;
 
+    // Constructs a list of bets, represents the entire betting history
     public BettingHistory() {
         this.bettingHistory = new ArrayList<Bets>();
     }
