@@ -27,6 +27,17 @@ public class BettingHistoryTest {
     }
 
     @Test
+    void viewAllBets() {
+        l1.add(b1);
+        assertEquals("|  Bet Number: 1  |  LeBron James Over 25.5 Points  |" +
+                "  You wagered $100.0  |  it had a 2.0 multiplier!  |  You won $100.0!  |", l1.viewAllBets());
+        l1.add(b2);
+        assertEquals("|  Bet Number: 1  |  LeBron James Over 25.5 Points  |  You wagered $100.0  |"+
+                "  it had a 2.0 multiplier!  |  You won $100.0!  ||  Bet Number: 2  |  LeBron James Over 7.5 Assists"+
+                "  |  You wagered $100.0  |  it had a 2.0 multiplier!  |  You lost $100.0!  |", l1.viewAllBets());
+
+    }
+    @Test
     void totalProfit() {
 
         l1.add(b1);

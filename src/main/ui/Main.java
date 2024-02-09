@@ -6,11 +6,15 @@ import model.Bets;
 public class Main {
     public static void main(String[] args) {
 
-        BettingHistory bets = new BettingHistory();
+        BettingHistory listOfBets = new BettingHistory();
 
-        bets.add(new Bets("LeBron James Over 10.5 Points", 10, 2, true));
+        listOfBets.add(new Bets("LeBron James Over 10.5 Points", 10, 2, true));
+        listOfBets.add(new Bets("LeBron James Under 7.5 Assists", 10, 2, false));
 
-        System.out.println(bets.totalProfit());
+        System.out.println(listOfBets.getBettingHistory());
+
+        System.out.println(listOfBets.viewAllBets());
+
     }
 
 
