@@ -46,4 +46,28 @@ public class BettingHistory {
         }
         return total;
     }
+
+    // REQUIRES: At least one bet won in betting history list
+    // EFFECTS: returns largest win
+    public double largestWin() {
+        double largest = 0;
+        for (Bets bet: bettingHistory) {
+            if (bet.getProfit() > largest) {
+                largest = bet.getProfit();
+            }
+        }
+        return largest;
+    }
+
+    // REQUIRES: At least one bet lost in betting history list
+    // EFFECTS: returns largest loss
+    public double largestLoss() {
+        double largest = 0;
+        for (Bets bet: bettingHistory) {
+            if (bet.getProfit() < largest) {
+                largest = bet.getProfit();
+            }
+        }
+        return largest;
+    }
 }

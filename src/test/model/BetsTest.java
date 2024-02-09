@@ -22,6 +22,7 @@ public class BetsTest {
     void Bets() {
 
         b1 = new Bets("LeBron James Over 25.5 Points", 100, 2, true);
+
         assertEquals(100, b1.getProfit());
         assertEquals(100, b1.getAmountPlaced());
         assertTrue(b1.getWin());

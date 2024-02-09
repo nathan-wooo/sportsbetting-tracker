@@ -61,4 +61,26 @@ public class BettingHistoryTest {
 
     }
 
+    @Test
+    void largestWin() {
+        l1.add(b1);
+        l1.add(b2);
+        l1.add(b3);
+        l1.add(b4);
+        l1.add(b5);
+        assertEquals(150, l1.largestWin());
+
+    }
+
+    @Test
+    void largestLoss() {
+        l1.add(b1);
+        l1.add(b2);
+        l1.add(b3);
+        l1.add(b4);
+        l1.add(b5);
+        assertEquals(-200, l1.largestLoss());
+
+    }
+
 }
