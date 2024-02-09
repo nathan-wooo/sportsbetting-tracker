@@ -24,4 +24,26 @@ public class BettingHistory {
         }
         return total;
     }
+
+    // EFFECTS: counts total wins
+    public int totalWins() {
+        int total = 0;
+        for (Bets bet: bettingHistory) {
+            if (bet.getWin()) {
+                total++;
+            }
+        }
+        return total;
+    }
+
+    // EFFECTS: counts total losses
+    public int totalLosses() {
+        int total = 0;
+        for (Bets bet: bettingHistory) {
+            if (!bet.getWin()) {
+                total++;
+            }
+        }
+        return total;
+    }
 }
