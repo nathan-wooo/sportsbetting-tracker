@@ -38,7 +38,7 @@ public class BettingHistory {
             profit = abs(bet.getProfit());
             fullString = fullString + "|  Bet Number: " + betNum + "  |  " + bet.getBetDesc() + "  |  You wagered $"
                     + bet.getAmountPlaced() + "  |  it had a " + bet.getOdds() + " multiplier!" + "  |  You "
-                    + result + " $" + profit + "!  |";
+                    + result + " $" + profit + "!  |\n";
             betNum++;
         }
         return fullString;
