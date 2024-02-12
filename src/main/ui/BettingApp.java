@@ -5,6 +5,7 @@ import model.BettingHistory;
 
 import java.util.Scanner;
 
+// Bet tracker application
 public class BettingApp {
 
     private BettingHistory listOfBets;
@@ -85,7 +86,7 @@ public class BettingApp {
         }
     }
 
-    // EFFECTS: displays menu of options to user
+    // EFFECTS: displays option menu for creating a bet
     private void displayCreateBetMenu() {
         System.out.println("\nState the description of bet");
         String description = input.next();

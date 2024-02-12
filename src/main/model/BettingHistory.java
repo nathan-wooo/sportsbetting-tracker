@@ -12,7 +12,7 @@ public class BettingHistory {
     // Constructs a list of bets, represents the entire betting history
     public BettingHistory() {
 
-        this.bettingHistory = new ArrayList<Bets>();
+        this.bettingHistory = new ArrayList<Bets>(); //
     }
 
     // EFFECTS: adds a bet to the entire betting history list
@@ -53,7 +53,7 @@ public class BettingHistory {
         return total;
     }
 
-    // EFFECTS: counts total wins
+    // EFFECTS: returns total wins
     public int totalWins() {
         int total = 0;
         for (Bets bet : bettingHistory) {
@@ -64,7 +64,7 @@ public class BettingHistory {
         return total;
     }
 
-    // EFFECTS: counts total losses
+    // EFFECTS: returns total losses
     public int totalLosses() {
         int total = 0;
         for (Bets bet : bettingHistory) {

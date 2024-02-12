@@ -6,14 +6,14 @@ import java.util.ArrayList;
 // whether it was a win or loss, and the  profit or loss made from the bet
 public class Bets {
 
-    protected String betDesc;
-    protected double amountPlaced;
-    protected double odds;
+    protected String betDesc; // description of the bet
+    protected double amountPlaced; // amount placed on the bet
+    protected double odds; // odds of the bet
     protected boolean win; // true is win, false is loss
-    protected double profit;
+    protected double profit; // amount won or loss from the bet, calculated with amount placed, odds, and win fields
 
     // EFFECTS: constructs a bet with given description, amount placed, odds, whether win or loss,
-    // and calculates the profit from the bet
+    // and calculates the profit from the bet depending on if boolean win is true or false
     public Bets(String betDesc, double amountPlaced, double odds, boolean win) {
         this.betDesc = betDesc;
         this.amountPlaced = amountPlaced;
