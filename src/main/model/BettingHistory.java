@@ -15,6 +15,7 @@ public class BettingHistory {
         this.bettingHistory = new ArrayList<Bets>(); //
     }
 
+    // MODIFIES: this
     // EFFECTS: adds a bet to the entire betting history list
     public void add(Bets bets) {
 
