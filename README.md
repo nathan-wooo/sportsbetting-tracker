@@ -33,3 +33,5 @@ decide to seek help in order to quit.
 - As a user, I want to be able to view my total number of wins and losses.
 - As a user, I want to be able to view my largest win and largest loss.
 - As a user, I want to be able to view the list of all my bets.
+- As a user, I want to be able to save my list of bets to file (if I so choose)
+- As a user, I want to be able to be able to load my list of bets from file (if I so choose)
