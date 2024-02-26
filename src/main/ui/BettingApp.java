@@ -68,21 +68,21 @@ public class BettingApp {
         if (command.equals("a")) {
             displayCreateBetMenu();
         } else if (command.equals("v")) {
-            System.out.println("Here are your bets:\n" + listOfBets.viewAllBets());
+            System.out.println("\n\n\nHere are your bets:\n" + listOfBets.viewAllBets() + "\n\n\n");
         } else if (command.equals("p")) {
-            System.out.println("Overall, you have won " + listOfBets.totalProfit() + " dollars!");
+            System.out.println("\n\n\nOverall, you have won " + listOfBets.totalProfit() + " dollars!\n\n\n");
         } else if (command.equals("w")) {
-            System.out.println("Overall, you have won " + listOfBets.totalWins() + " bets!");
+            System.out.println("\n\n\nOverall, you have won " + listOfBets.totalWins() + " bets!\n\n\n");
         } else if (command.equals("l")) {
-            System.out.println("Overall, you have lost " + listOfBets.totalLosses() + " bets!");
+            System.out.println("\n\n\nOverall, you have lost " + listOfBets.totalLosses() + " bets!\n\n\n");
         } else if (command.equals("lw")) {
-            System.out.println("Your largest win profited: " + listOfBets.largestWin());
+            System.out.println("\n\n\nYour largest win profited: " + listOfBets.largestWin() + "\n\n\n");
         } else if (command.equals("ll")) {
-            System.out.println("Your largest loss was: $" + listOfBets.largestLoss());
+            System.out.println("\n\n\nYour largest loss was: $" + listOfBets.largestLoss() + "\n\n\n");
         } else if (command.equals("help")) {
-            System.out.println("Please call: 1-800-GAMBLER for help");
+            System.out.println("\n\n\nPlease call: 1-800-GAMBLER for help \n\n\n");
         } else {
-            System.out.println("Selection not valid...");
+            System.out.println("\n\n\nSelection not valid...\n\n\n");
         }
     }
 
