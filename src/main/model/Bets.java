@@ -26,6 +26,7 @@ public class Bets {
         }
     }
 
+    // EFFECTS: these are all getters
     public String getBetDesc() {
         return betDesc;
     }

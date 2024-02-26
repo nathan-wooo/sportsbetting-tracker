@@ -70,7 +70,7 @@ public class BettingApp {
         } else if (command.equals("v")) {
             System.out.println("\n\n\nHere are your bets:\n" + listOfBets.viewAllBets() + "\n\n\n");
         } else if (command.equals("p")) {
-            System.out.println("\n\n\nOverall, you have won " + listOfBets.totalProfit() + " dollars!\n\n\n");
+            System.out.println("\n\n\nYour total profit is " + listOfBets.totalProfit() + " dollars!\n\n\n");
         } else if (command.equals("w")) {
             System.out.println("\n\n\nOverall, you have won " + listOfBets.totalWins() + " bets!\n\n\n");
         } else if (command.equals("l")) {
