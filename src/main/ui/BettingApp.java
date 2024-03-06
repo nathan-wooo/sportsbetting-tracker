@@ -67,7 +67,7 @@ public class BettingApp {
         System.out.println("\tw -> Number of Wins");
         System.out.println("\tl -> Number of Losses");
         System.out.println("\tlw -> Largest Win");
-        System.out.println("\tll -> Largest Lost");
+        System.out.println("\tll -> Largest Loss");
         System.out.println("\thelp -> Gambling Support");
         System.out.println("\tq -> Quit");
 
