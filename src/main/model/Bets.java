@@ -51,7 +51,7 @@ public class Bets implements Writable {
     @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
-        json.put("description", betDesc);
+        json.put("betDesc", betDesc);
         json.put("amountPlaced", amountPlaced);
         json.put("odds", odds);
         json.put("win", win);

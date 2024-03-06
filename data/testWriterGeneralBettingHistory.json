@@ -1,0 +1,16 @@
+{"bettingHistory": [
+    {
+        "amountPlaced": 1000,
+        "odds": 2,
+        "betDesc": "LeBron James Over 10.5 Points",
+        "win": true,
+        "profit": 1000
+    },
+    {
+        "amountPlaced": 1,
+        "odds": 10,
+        "betDesc": "Anthony Davis Over 500.5 Points",
+        "win": true,
+        "profit": 9
+    }
+]}

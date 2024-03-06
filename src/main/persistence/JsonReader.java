@@ -47,17 +47,17 @@ public class JsonReader {
     }
 
     // MODIFIES: bh
-    // EFFECTS: parses thingies from JSON object and adds them to workroom
+    // EFFECTS: parses bets from JSON object and adds them to bettingHistory
     private void addBettingHistory(BettingHistory bh, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("bettingHistory");
         for (Object json : jsonArray) {
-            JSONObject nextThingy = (JSONObject) json;
-            addBets(bh, nextThingy);
+            JSONObject nextBet = (JSONObject) json;
+            addBets(bh, nextBet);
         }
     }
 
     // MODIFIES: bh
-    // EFFECTS: parses thingy from JSON object and adds it to workroom
+    // EFFECTS: parses bet from JSON object and adds it to bettingHistory
     private void addBets(BettingHistory bh, JSONObject jsonObject) {
         String betDesc = jsonObject.getString("betDesc");
         Double amountPlaced = jsonObject.getDouble("amountPlaced");

@@ -25,7 +25,7 @@ class JsonReaderTest extends JsonTest {
 
     @Test
     void testReaderEmptyWorkRoom() {
-        JsonReader reader = new JsonReader("data/testReaderEmptyBettingHistory");
+        JsonReader reader = new JsonReader("./data/testReaderEmptyBettingHistory.json");
         try {
             BettingHistory bh = reader.read();
             assertEquals(0, bh.totalProfit());
@@ -39,13 +39,15 @@ class JsonReaderTest extends JsonTest {
 
     @Test
     void testReaderGeneralWorkRoom() {
-        JsonReader reader = new JsonReader("data/testReaderGeneralBettingHistory");
+        JsonReader reader = new JsonReader("./data/testReaderGeneralBettingHistory.json");
         try {
             BettingHistory bh = reader.read();
             List<Bets> bettingHistory = bh.getBets();
             assertEquals(2, bh.totalWins());
-            checkThingy("LeBron James Over 10.5 Points", 1000, 2, 1000, true, bettingHistory.get(0));
-            checkThingy("Anthony Davis Over 500.5 Points", 9, 10, 1, true, bettingHistory.get(1));
+            checkThingy("LeBron James Over 10.5 Points", 1000, 2, 1000, true,
+                    bettingHistory.get(0));
+            checkThingy("Anthony Davis Over 500.5 Points", 9, 10, 1, true,
+                    bettingHistory.get(1));
         } catch (IOException e) {
             fail("Couldn't read from file");
         }
