@@ -28,6 +28,11 @@ public class BettingHistory implements Writable {
         this.bettingHistory.add(bets);
     }
 
+    // EFFECTS: returns an unmodifiable list of bets in this bettingHistory
+    public List<Bets> getBets() {
+        return Collections.unmodifiableList(bettingHistory);
+    }
+
 
     // REQUIRES: At least one bet object in list of betting history
     // EFFECTS: Returns a string of data about all bets in betting history list
