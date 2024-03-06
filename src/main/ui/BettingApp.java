@@ -2,17 +2,26 @@ package ui;
 
 import model.Bets;
 import model.BettingHistory;
+import persistence.JsonReader;
+import persistence.JsonWriter;
 
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 // Bet tracker application
 public class BettingApp {
-
+    private static final String JSON_STORE = "./data/bettingHistory.json";
     private BettingHistory listOfBets;
     private Scanner input;
+    private JsonWriter jsonWriter;
+    private JsonReader jsonReader;
 
     // EFFECTS: runs the betting application
     public BettingApp() {
+        jsonWriter = new JsonWriter(JSON_STORE);
+        jsonReader = new JsonReader(JSON_STORE);
         runBetting();
     }
 
@@ -50,6 +59,8 @@ public class BettingApp {
     // EFFECTS: displays menu of options to user
     private void displayMenu() {
         System.out.println("\nSelect Options:");
+        System.out.println("\tload -> Load betting history");
+        System.out.println("\tsave -> Save betting history");
         System.out.println("\ta -> Add Bet");
         System.out.println("\tv -> View Bets");
         System.out.println("\tp -> Total Profit");
@@ -81,6 +92,10 @@ public class BettingApp {
             System.out.println("\n\n\nYour largest loss was: $" + listOfBets.largestLoss() + "\n\n\n");
         } else if (command.equals("help")) {
             System.out.println("\n\n\nPlease call: 1-800-GAMBLER for help \n\n\n");
+        } else if (command.equals("load")) {
+            loadBettingHistory();
+        } else if (command.equals("save")) {
+            saveBettingHistory();
         } else {
             System.out.println("\n\n\nSelection not valid...\n\n\n");
         }
@@ -99,6 +114,30 @@ public class BettingApp {
         Bets theBet = new Bets(description, amountPlaced, odds, won);
         listOfBets.add(theBet);
 
+    }
+
+    // EFFECTS: saves the betting history to file
+    private void saveBettingHistory() {
+        try {
+            jsonWriter.open();
+            jsonWriter.write(listOfBets);
+            jsonWriter.close();
+            System.out.println("Saved betting history to " + JSON_STORE);
+        } catch (FileNotFoundException e) {
+            System.out.println("Unable to write to file: " + JSON_STORE);
+        }
+        System.exit(1);
+    }
+
+    // MODIFIES: this
+    // EFFECTS: loads betting history from file
+    private void loadBettingHistory() {
+        try {
+            listOfBets = jsonReader.read();
+            System.out.println("Loaded betting history from " + JSON_STORE);
+        } catch (IOException e) {
+            System.out.println("Unable to read from file: " + JSON_STORE);
+        }
     }
 
 }
