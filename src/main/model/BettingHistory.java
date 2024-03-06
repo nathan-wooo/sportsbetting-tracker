@@ -1,11 +1,17 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
+
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import static java.lang.Math.abs;
 
 // Represents the entire betting history as an ArrayList of every bet
-public class BettingHistory {
+public class BettingHistory implements Writable {
 
     private ArrayList<Bets> bettingHistory;
 
@@ -102,6 +108,25 @@ public class BettingHistory {
 
     public ArrayList<Bets> getBettingHistory() {
         return bettingHistory;
+    }
+
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("bettingHistory", thingiesToJson());
+        return json;
+    }
+
+    // EFFECTS: returns things in this workroom as a JSON array
+    private JSONArray thingiesToJson() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (Bets b : bettingHistory) {
+            jsonArray.put(b.toJson());
+        }
+
+        return jsonArray;
     }
 
 }

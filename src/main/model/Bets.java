@@ -1,10 +1,11 @@
 package model;
 
-import java.util.ArrayList;
+import org.json.JSONObject;
+import persistence.Writable;
 
 // Represents a bet having a description of the bet, amount of money placed on it, the odds,
 // whether it was a win or loss, and the  profit or loss made from the bet
-public class Bets {
+public class Bets implements Writable {
 
     protected String betDesc; // description of the bet
     protected double amountPlaced; // amount placed on the bet
@@ -45,5 +46,17 @@ public class Bets {
 
     public double getProfit() {
         return profit;
+    }
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("description", betDesc);
+        json.put("amountPlaced", amountPlaced);
+        json.put("odds", odds);
+        json.put("win", win);
+        json.put("profit", profit);
+        return json;
+
     }
 }
