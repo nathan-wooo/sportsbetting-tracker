@@ -47,13 +47,19 @@ public class JSwing extends JFrame {
         loadButton.addActionListener(e -> loadBettingHistory(e));
         saveButton.addActionListener(e -> saveBettingHistory(e));
         addBetButton.addActionListener(e -> addBet());
-        add(loadButton);
-        add(totalProfitLabel);
-        add(listScrollPane);
+        addThreeThings(loadButton, totalProfitLabel, listScrollPane);
         add(saveButton);
         add(biggestWinLabel);
         add(createAddBetPanel(addBetButton));
         setVisible(true);
+    }
+
+    // EFFECTS: adds button label and pane to GUI
+    // helper method for constructor due to checkstyle
+    public void addThreeThings(JButton button1, JLabel label1, JScrollPane pane1) {
+        add(button1);
+        add(label1);
+        add(pane1);
     }
 
 
