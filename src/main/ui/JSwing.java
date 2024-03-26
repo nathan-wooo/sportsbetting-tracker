@@ -105,7 +105,7 @@ public class JSwing extends JFrame {
         }
     }
 
-    // EFFECTS: Creates new bet
+    // EFFECTS: Creates new bet and displays jpg image if bet is added successfully
     private void addBet() {
         try {
             String betDesc = betDescField.getText();
@@ -115,6 +115,10 @@ public class JSwing extends JFrame {
             Bets bet = new Bets(betDesc, amountPlaced, odds, win);
             bettingHistory.add(bet);
             updateDisplays();
+
+            ImageIcon imageIcon = new ImageIcon("./data/funnyMEME.jpg");
+            JOptionPane.showMessageDialog(this, "", "Bet Added Successfully",
+                    JOptionPane.INFORMATION_MESSAGE, imageIcon);
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this,
                     "Please enter valid numbers for amount and odds.", "Input Error",
