@@ -44,8 +44,8 @@ public class JSwing extends JFrame {
         bettingHistoryArea = new JTextArea();
         bettingHistoryArea.setEditable(false);
         JScrollPane listScrollPane = new JScrollPane(bettingHistoryArea);
-        loadButton.addActionListener(e -> loadBettingHistory(e));
-        saveButton.addActionListener(e -> saveBettingHistory(e));
+        loadButton.addActionListener(e -> loadBettingHistory());
+        saveButton.addActionListener(e -> saveBettingHistory());
         addBetButton.addActionListener(e -> addBet());
         addThreeThings(loadButton, totalProfitLabel, listScrollPane);
         add(saveButton);
@@ -87,7 +87,7 @@ public class JSwing extends JFrame {
     }
 
     // EFFECTS: loads betting history
-    private void loadBettingHistory(ActionEvent e) {
+    private void loadBettingHistory() {
         try {
             bettingHistory = jsonReader.read();
             updateDisplays();
@@ -99,7 +99,7 @@ public class JSwing extends JFrame {
     }
 
     // EFFECTS: saves betting history
-    private void saveBettingHistory(ActionEvent e) {
+    private void saveBettingHistory() {
         try {
             jsonWriter.open();
             jsonWriter.write(bettingHistory);
