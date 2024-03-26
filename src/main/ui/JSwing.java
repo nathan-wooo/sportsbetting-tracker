@@ -27,7 +27,7 @@ public class JSwing extends JFrame {
     private JsonReader jsonReader;
     private JsonWriter jsonWriter;
 
-    // EFFECTS:
+    // EFFECTS: Creates main GUI
     public JSwing() {
         super("Nathan's Betting Tracker");
         setSize(1024, 768);
