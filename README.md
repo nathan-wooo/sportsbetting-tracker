@@ -45,3 +45,13 @@ the three visuals relating to bets.
 - You can locate my visual component by adding a bet. Whenever a bet is added successfully the same image appears.
 - You can save the state of my application by clicking the load button in the GUI.
 - You can reload the state of my application by clicking the save button in the GUI.
+
+### Phase 4: Task 2
+- Wed Apr 03 03:17:53 PDT 2024
+  Bets loaded
+- Wed Apr 03 03:17:53 PDT 2024
+  Bets added to betting history
+- Wed Apr 03 03:18:00 PDT 2024
+  Bets saved to file
+
+Process finished with exit code 0

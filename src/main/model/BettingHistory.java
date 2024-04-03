@@ -6,7 +6,9 @@ import persistence.Writable;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
+
 
 import static java.lang.Math.abs;
 
@@ -26,7 +28,17 @@ public class BettingHistory implements Writable {
     public void add(Bets bets) {
 
         this.bettingHistory.add(bets);
+        EventLog.getInstance().logEvent(new Event("Bets added to betting history"));
     }
+
+    public void printLogs() {
+        Iterator<Event> iterator = EventLog.getInstance().iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
+
 
     // EFFECTS: returns an unmodifiable list of bets in this bettingHistory
     public List<Bets> getBets() {

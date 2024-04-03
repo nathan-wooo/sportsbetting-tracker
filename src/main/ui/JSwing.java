@@ -7,6 +7,7 @@ import persistence.JsonWriter;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -31,7 +32,6 @@ public class JSwing extends JFrame {
     public JSwing() {
         super("Nathan's Betting Tracker");
         setSize(1024, 768);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(2, 3));
         bettingHistory = new BettingHistory();
         jsonReader = new JsonReader(JSON_STORE);
@@ -47,19 +47,32 @@ public class JSwing extends JFrame {
         loadButton.addActionListener(e -> loadBettingHistory());
         saveButton.addActionListener(e -> saveBettingHistory());
         addBetButton.addActionListener(e -> addBet());
-        addThreeThings(loadButton, totalProfitLabel, listScrollPane);
-        add(saveButton);
+        addFourThings(loadButton, totalProfitLabel, listScrollPane, saveButton);
         add(biggestWinLabel);
         add(createAddBetPanel(addBetButton));
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        addAddWindowListener();
         setVisible(true);
+    }
+
+    public void addAddWindowListener() {
+        addWindowListener(
+                new WindowAdapter() {
+                    @Override
+                    public void windowClosing(WindowEvent e) {
+                        bettingHistory.printLogs();
+                        System.exit(0);
+                    }
+                });
     }
 
     // EFFECTS: adds button label and pane to GUI
     // helper method for constructor due to checkstyle
-    public void addThreeThings(JButton button1, JLabel label1, JScrollPane pane1) {
+    public void addFourThings(JButton button1, JLabel label1, JScrollPane pane1, JButton button2) {
         add(button1);
         add(label1);
         add(pane1);
+        add(button2);
     }
 
 
@@ -153,4 +166,5 @@ public class JSwing extends JFrame {
         bettingHistoryArea.setText(historyText.toString());
     }
 }
+
 
