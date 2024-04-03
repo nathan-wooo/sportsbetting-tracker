@@ -74,6 +74,7 @@ public class BettingHistory implements Writable {
         for (Bets bet : bettingHistory) {
             total += bet.getProfit();
         }
+        EventLog.getInstance().logEvent(new Event("Total profit displayed and updated"));
         return total;
     }
 
@@ -108,6 +109,7 @@ public class BettingHistory implements Writable {
                 largest = bet.getProfit();
             }
         }
+        EventLog.getInstance().logEvent(new Event("Biggest win displayed and updated"));
         return largest;
     }
 

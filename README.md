@@ -47,11 +47,26 @@ the three visuals relating to bets.
 - You can reload the state of my application by clicking the save button in the GUI.
 
 ### Phase 4: Task 2
-- Wed Apr 03 03:17:53 PDT 2024
-  Bets loaded
-- Wed Apr 03 03:17:53 PDT 2024
-  Bets added to betting history
-- Wed Apr 03 03:18:00 PDT 2024
-  Bets saved to file
+- Wed Apr 03 15:20:43 PDT 2024
+Bets loaded
+- Wed Apr 03 15:20:43 PDT 2024
+Bets added to betting history
+- Wed Apr 03 15:20:43 PDT 2024
+Bets added to betting history
+- Wed Apr 03 15:20:43 PDT 2024
+Bets added to betting history
+- Wed Apr 03 15:20:43 PDT 2024
+Bets added to betting history
+- Wed Apr 03 15:20:43 PDT 2024
+Total profit displayed and updated
+- Wed Apr 03 15:20:43 PDT 2024
+Biggest win displayed and updated
+- Wed Apr 03 15:20:48 PDT 2024
+Bets added to betting history
+- Wed Apr 03 15:20:48 PDT 2024
+Total profit displayed and updated
+- Wed Apr 03 15:20:48 PDT 2024
+Biggest win displayed and updated
+- Wed Apr 03 15:20:50 PDT 2024
+Bets saved to file
 
-Process finished with exit code 0
