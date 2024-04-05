@@ -70,3 +70,4 @@ Biggest win displayed and updated
 - Wed Apr 03 15:20:50 PDT 2024
 Bets saved to file
 
+### Phase 4: Task 3
