@@ -71,3 +71,11 @@ Biggest win displayed and updated
 Bets saved to file
 
 ### Phase 4: Task 3
+
+- If I had more time to work on my project, something I would refactor to improve my project is make a UI interface
+where the console UI and GUI would implement it. The reason for this is that the console UI and GUI have
+similar methods but with small differences. For example, both the of the UI's have a saveBettingHistory and
+loadBettingHistory method but have differing code inside the methods. What this would do is make sure that if I made
+any other UI's, I would know that those methods inside the interface should be included in the new UI. In the case that
+the UI and GUI had the exact same loadBettingHistory and saveBettingHistory method, instead of an interface I would
+make an abstract class where the UI's would share the methods.
