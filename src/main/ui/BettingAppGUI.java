@@ -8,11 +8,10 @@ import persistence.JsonWriter;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.event.ActionEvent;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class JSwing extends JFrame {
+public class BettingAppGUI extends JFrame {
 
     private BettingHistory bettingHistory;
     private JTextArea bettingHistoryArea;
@@ -29,7 +28,7 @@ public class JSwing extends JFrame {
     private JsonWriter jsonWriter;
 
     // EFFECTS: Creates main GUI
-    public JSwing() {
+    public BettingAppGUI() {
         super("Nathan's Betting Tracker");
         setSize(1024, 768);
         setLayout(new GridLayout(2, 3));
@@ -77,7 +76,7 @@ public class JSwing extends JFrame {
 
 
     public static void main(String[] args) {
-        new JSwing();
+        new BettingAppGUI();
     }
 
     // EFFECTS: creates panel for adding bets

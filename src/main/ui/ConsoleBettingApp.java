@@ -11,19 +11,27 @@ import java.io.IOException;
 import java.util.Scanner;
 
 // Bet tracker application
-public class BettingApp {
+public class ConsoleBettingApp {
     private static final String JSON_STORE = "./data/bettingHistory.json";
     private BettingHistory listOfBets;
     private Scanner input;
     private JsonWriter jsonWriter;
     private JsonReader jsonReader;
 
+    // EFFECTS: runs the console UI
+    public static void main(String[] args) {
+
+        new ConsoleBettingApp();
+
+    }
+
     // EFFECTS: runs the betting application
-    public BettingApp() {
+    public ConsoleBettingApp() {
         jsonWriter = new JsonWriter(JSON_STORE);
         jsonReader = new JsonReader(JSON_STORE);
         runBetting();
     }
+
 
     // MODIFIES: this
     // EFFECTS: processes user input
